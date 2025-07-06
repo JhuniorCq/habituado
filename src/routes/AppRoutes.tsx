@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import AlertHistory from "../pages/AlertHistory";
 
@@ -7,6 +7,7 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/alert-history" element={<AlertHistory />} />
+      <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
