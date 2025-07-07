@@ -38,7 +38,7 @@ const AlertHistory = () => {
       buttonName="DATOS EN TIEMPO REAL"
       redictTo="/"
     >
-      <div className="w-64 overflow-auto pb-4 min-[480px]:w-80 sm:w-[420px] md:w-[620px] lg:w-[820px] xl:w-[1020px] 2xl:w-[1260px] min-[1640px]:w-[1460px] min-[1860px]:w-[1670px] min-[1860px]:pb-0">
+      <div className="w-64 max-h-96 overflow-auto pb-4 min-[480px]:w-80 sm:w-[420px] md:w-[620px] lg:w-[820px] xl:w-[1020px] 2xl:w-[1260px] min-[1640px]:w-[1460px] min-[1860px]:w-[1670px] min-[1860px]:pb-0">
         <table className="w-full table-auto border-collapse border border-taupe-dark text-sm min-[480px]:text-base">
           <thead>
             <tr className="bg-white">
@@ -97,6 +97,825 @@ const AlertHistory = () => {
             )}
 
             {/* Filas dinámicas */}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
+            {!loading &&
+              !error &&
+              alerts.length > 0 &&
+              alerts.map((a, i) => (
+                <tr className="bg-white transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                  {/* Fecha */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.date}
+                  </td>
+                  {/* Hora */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.time}
+                  </td>
+                  {/* Alerta */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.alert}
+                  </td>
+                  {/* Temperatura */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.temperature}
+                  </td>
+                  {/* Humedad */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark"
+                  >
+                    {a.humidity}
+                  </td>
+                  {/* Nivel de Luz */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.lightLevel}
+                  </td>
+                  {/* Detección de desorden */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.clutterDetection}
+                  </td>
+                  {/* Cajón */}
+                  <td
+                    key={i}
+                    className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize"
+                  >
+                    {a.drawer}
+                  </td>
+                </tr>
+              ))}
             {!loading &&
               !error &&
               alerts.length > 0 &&
