@@ -7,7 +7,7 @@ import { firestore } from "../libs/firebase";
 const AlertHistory = () => {
   const [alerts, setAlerts] = useState<Alert[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<null | string>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchAlerts = async () => {
@@ -160,33 +160,6 @@ const AlertHistory = () => {
                   </td>
                 </tr>
               ))}
-            {/* Fila de ejemplo */}
-            <tr className="bg-yellow-300 transition-colors duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
-              <td className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark">
-                Feb 7, 2025
-              </td>
-              <td className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark">
-                22:31
-              </td>
-              <td className="font-semibold bg-red-700 text-white border border-taupe-dark text-center px-3 py-1">
-                Esta Fila es de ejemplo
-              </td>
-              <td className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark">
-                28.4 °C
-              </td>
-              <td className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark">
-                67%
-              </td>
-              <td className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark">
-                Oscuro
-              </td>
-              <td className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark">
-                Detectado
-              </td>
-              <td className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark">
-                Abierto
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>

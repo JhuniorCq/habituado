@@ -12,6 +12,9 @@ export type LightLevel = keyof typeof LIGHT_LEVEL;
 export type ClutterDetection = keyof typeof CLUTTER_DETECTION;
 export type DrawerStatuses = keyof typeof DRAWER_STATUSES;
 
+export type LightLevelStatuses = "alta" | "baja";
+export type ClutterDetectionStatuses = "ordenado" | "desordenado";
+
 export type Alert = {
   alert: string;
   clutterDetection: ClutterDetection;
@@ -22,3 +25,5 @@ export type Alert = {
   temperature: number;
   time: string;
 };
+
+export type Sensors = Omit<Alert, "alert" | "date" | "time">;
