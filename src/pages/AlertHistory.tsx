@@ -20,7 +20,22 @@ const AlertHistory = () => {
           alertData.push(data);
         });
 
-        setAlerts(alertData);
+        // Ordenamiento por fecha y hora
+        const sortedAlerts = alertData.sort((a, b) => {
+          const parseDateTime = (dateStr: string, timeStr: string) => {
+            // dateStr: "06-07-2025", timeStr: "00:21"
+            const [day, month, year] = dateStr.split("-").map(Number);
+            const [hour, minute] = timeStr.split(":").map(Number);
+            return new Date(year, month - 1, day, hour, minute).getTime();
+          };
+
+          const timeA = parseDateTime(a.date, a.time);
+          const timeB = parseDateTime(b.date, b.time);
+
+          return timeB - timeA; // orden descendente
+        });
+
+        setAlerts(sortedAlerts);
       } catch (error) {
         console.error("Error al traer alertas: ", error);
         setError("Ocurrió un problema al obtener las alertas");
@@ -121,11 +136,11 @@ const AlertHistory = () => {
                   </td>
                   {/* Temperatura */}
                   <td className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark">
-                    {a.temperature}
+                    {a.temperature} °C
                   </td>
                   {/* Humedad */}
                   <td className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark">
-                    {a.humidity}
+                    {a.humidity} %
                   </td>
                   {/* Nivel de Luz */}
                   <td className="border border-taupe-dark text-center px-3 py-1 text-taupe-dark capitalize">
